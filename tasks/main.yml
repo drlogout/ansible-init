@@ -26,7 +26,7 @@
   tags: etc_hosts_config
 
 - name: update hostname
-  hostname: name="{{ ansible_hostname }}"
+  hostname: name="{{ inventory_hostname_short }}"
 
 - include: python.yml
   when: ansible_distribution == 'Ubuntu' and ansible_distribution_version | version_compare('15.04', '<')
